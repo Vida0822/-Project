@@ -1,5 +1,5 @@
 # :pushpin: Java로 테니스 계수기 만들기
->고퀄리티 개발 컨텐츠 공유 서비스  
+> Java의 interface 개념을 활용한 테니스 계수기 구현과 파일 출력기능  
 >https://go-quality.dev  
 
 </br>
