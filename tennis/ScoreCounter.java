@@ -164,6 +164,7 @@ public class ScoreCounter implements I { // 인터페이스 I를 구현하고 ov
 		System.out.println();
 		System.out.printf("%s\t %d\t %d\t %d\n", player2, printplayer2Point, player2Game, player2Set);
 		System.out.println("-".repeat(30));
+		
 		if (winner != null) {
 			System.out.printf("승자가 나왔습니다 : %s", winner);
 			list1 = String.format("\t   SCORE\t GAME \t    SET\n"); //리스트 저장함수
