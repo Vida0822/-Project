@@ -1,4 +1,4 @@
-# :pushpin: Java로 테니스 계수기 만들기 (팀' ver & 개인' ver)
+# :pushpin: Java로 테니스 계수기 만들기 
 
 > Java의 interface 개념을 활용한 테니스 계수기 구현과 파일 출력기능  
 > https://go-quality.dev  
@@ -6,6 +6,10 @@
 </br> 
 
 ### 목차
+
+<details>
+<summary><b>목차 펼치기</b></summary>
+<div markdown="1">
 
 1. 제작기간 & 참여 인원  <br>
 
@@ -15,25 +19,22 @@
 
 4. 순서도 (프로그램 흐름)  <br>
 
-5. 클래스 다이어그램 - Interface의 두가지 사용방법  <br>
+5. 클래스 다이어그램 (부제: Interface의 개념과 특징)  <br>
 
-6. 핵심 기능 코딩- 팀'ver 코드설명<br>
+6. 핵심 기능 코딩 <br>
 
 7. 트러블 슈팅  <br>
 
-8. 객체 지향 프로그래밍을 더 잘 활용해보자 - 개인'ver 코드설명 <br>
-
-9. 프로젝트 회고 <br>
+8. 프로젝트 회고 <br>
 
    <br> 
 
 
 ## 1. 제작 기간 & 참여 인원 
 
-- 팀 프로젝트 (7인) - Interface의 첫번째 활용방법   <br>
-  -  2023 3월 7일 ~ 3월 10일 (4일)  <br>
-- 개인 프로젝트 (1인) - Interface의 두번째 활용방법  <br>
-  	*   2023 7월 12일 ~ 7월 13일 (2일)  <br>
+👩‍👧‍👧 팀 프로젝트 (7인)<br>
+
+-  2023 3월 7일 ~ 3월 10일 (4일)  <br>
 
 </br>
 
@@ -50,7 +51,7 @@
 
 ## 3. 요구 분석 
 
-① 두 선수 중 포인트를 득점한 선수의 게임 포인트를 증가시킨다. 득점할 때마다 득점 포인트는 0→15→30→40 순으로 표현한다.  <br>
+① 두 선수 중 득점한 선수의 게임 포인트를 증가시킨다. 득점할 때마다 득점 포인트는 0→15→30→40 순으로 표현한다.  <br>
 ② 게임 점수가 40인 선수가 포인트를 획득하면 그 게임을 승리한다. 단, 두 선수가 모두 40점인 경우는 듀스가 된다. 듀스가 된 후에는 상대방보다 두 포인트를 더 획득한 선수가 그 게임을 승리한다.  <br>
 ③ 상대방보다 2게임 이상 차이를 두고 6게임 이상을 먼저 획득한 선수가 그 세트를 승리한다.   <br>
 ④ 경기 세트 수의 반 이상을 먼저 승리한 선수가 최종 승자이다.  <br> <br>
@@ -82,10 +83,10 @@
 
 
 
-​	이 서비스의 핵심 기능은 포인트를 획득해 전체적인 경기 점수에 반영하는 계수기 기능과 현재 게임 스코어를 출력하는 점수판 기능입니다. 사용자는 경기수와 경기자를 설정하고 실행을 하면 반복적으로 승자를 도출하며 테니스 경기를 자동으로 실행하고 경기 종료시 파일에 그 결과를 출력합니다.
+​	이 서비스의 핵심 기능은 포인트를 획득해 전체적인 경기 점수에 반영하는 계수기 기능과 현재 게임 스코어를 출력하는 점수판 기능이다. 사용자는 경기수와 경기자를 설정하고 실행을 하면 반복적으로 승자를 도출하며 테니스 경기를 자동으로 실행하고 경기 종료시 파일에 그 결과를 출력한다.
 
 
-​	이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있습니다.  
+​	이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있다.  
 
 
 
@@ -101,13 +102,25 @@
 <summary><b>핵심 기능 설명 펼치기</b></summary>
 <div markdown="1">
 
-### 5.1. Interface 개념 및 두가지 활용방안 
+### 5.1. Interface 개념 및 특징
+
+​	인터페이스(interface)란 미완성 설계도, 즉 추상 클래스와 유사하지만 일반 메서드도 포함할 수 있는 다른 일반 추상 클래스와 달리 오로지 추상 메서드와 상수로만 이루어진다 (※ jdk 1.8 버전부턴 'default method' 형태로 포함 가능). 즉 해당 interface 안에는 오로지 메서드의 선언부만 작성된다.
+
+​	이러한 인터페이스의 특징은 다음과 같다. 
+
+1. 다형성 : 조상 타입, 즉 추상 클래스 타입 참조변수로 구현된 자손 인스턴스를 대입하여 사용할 수 있다. 
+
+2. 강제성: 해당 기능을 사용하기 위해  자손 클래스은 필요한 메서드를 강제로 오버라이딩 하게한다. 
+3. has-a: 다중 상속, 즉 하나의 조상클래스만 가질 수 있는 것과 달리 여러개의 interface를 상속받을 수 있다 ('기능'으로서의 역할)
+
+​	위와 같은 interface의 개념과 특징을 활용해, 우리가 활용한 인터페이스의 활용방안은 다음 두가지이다. 
+
+1. 기본 설계도
+2. 협업  
 
 
 
-
-
-### 5.2. 클래스 다이어그램 (팀)
+### 5.2. 클래스 다이어그램 
 
 ##### 2023-03
 
@@ -115,23 +128,9 @@
 
 
 
-### 5.3. 클래스 다이어그램 (개인) 
+​	팀 프로젝트 당시 사용한 인터페이스의 첫번째 사용용도는 '기본 설계도'로서의 인터페이스이다.세상에 많은 계수기들이 있지만, 계수기라면 구현해야할 필수적인 기능인 '점수 계산' 기능과 '점수 출력'기능을 반드시 구현하도록 '계수기'의 기본 설계도를 만들어 계수기라면 반드시 포함해야할 최소한의 메서드를 작성해 놓는다. 하지만 세상엔 수많은 경기 종목이 있고 이 모두를 하나의 클래스에서 다 고려할 수 없기때문에 자손 클래스에서 이를 상속받아 각 경기 종목에 맞춰 각자 알아서 구현하게끔 하는 인터페이스의 형식을 만들어 기본 설계도로서 기능하게 한다. 그래서 이를 상속받은 테니스 계수기, 즉 ScoreCounter도 해당 메서드를 상속받아 테니스 규칙을 적용하면서 자손 메서드를 구현한다. 
 
-##### 2023-07
-
-
-
-![클래스다이어그램](D:\Programming\images\readme\클래스다이어그램.jpg)
-
-* interface ScoreCounter의 활용 : interface에 포인트를 올리는 계수기 기능 메서드와 점수를 출력하는 점수판 기능의 메서드를 선언하여 실제 경기를 진행하는 ClassMain에서 해당 메서드를 실행할 수 있고 Class ScoreCounter에선 해당 인터페이스의 메서드를 구현하는 방식으로 역할분담을 해서 실제로 기능을 명확히 정해놓으니 계수기 객체가 다 구현이 안되었더라도 실행부 개발과 구현부 개발을 동시에 진행할 수 있었다.  <br>
-
-
-
-+ 블로그 link : 못했던 구현을 6개월 뒤 교육과정이 끝난 후 성공하다 (우리가 그때 좀더 알았더라면...)
-
-
-
-
+​	따라서 우린 기본적인 계수기 기능 메서드를 선언해둔 '계수기' 기본 설계도 인터페이스, 즉 I를 선언하고 테니스 계수기인 ScoreCounter 클래스에서 이를 구현하도록 설정하여 ScoreCounter는 해당 두 메서드를 오버라이딩한다. 이렇게 구현한 ScoreCounter를 실제 경기가 실행되는 main함수가 존재하는 TennisMain 에서 객체 생성해 사용하게끔 구조를 설정했다.  
 
 
 
@@ -139,16 +138,12 @@
 
 ## 6. 핵심 기능
 
-👩‍💻 팀/ 개인 프로젝트는 해당 계수기 객체를 호출하는 방식 부분만 다르기 때문에 기능 코드설명은 팀 프로젝트 기준으로 설명하겠습니다. 
-
 <details>
 <summary><b>핵심 기능 설명 펼치기</b></summary>
 <div markdown="1">
-
-
 ### 4.1. 전체 흐름
 
-![핵심기능](D:\Programming\images\readme\핵심기능.png)
+![핵심기능](D:\Programming\images\README\핵심기능-1689332910364-1.png)
 
 * Class TennisMain : 테니스 경기수 , 경기할 플레이어 등 경기를 세팅해 해당 정보로 계수기 객체를 생성하고 반복문으로 득점자를 도출해 생성해준 계수기 객체에 반영하는 실제 경기 실행 클래스 <br>
 * Class ScoreCounter: 테니스의 전반적인 규칙을 반영한 클래스. 크게 점수를 계산하는 계수기 기능과 점수를 출력하는 점수판 기능으로 이루어져 있다. <br>
@@ -156,68 +151,79 @@
 
 
 
-### 4.2. 게임 세팅 및 진행 - main () 
+### 4.2. 게임 세팅 및 진행 
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
 
-- **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b587bbff4dce02e3bec4f4787151a9b6fa326319/frontend/src/components/PostInput.vue#L67)
 
-  - Vue.js로 렌더링된 화면단에서, 사용자가 등록을 시도한 URL의 모양새를 정규식으로 확인합니다.
-  - URL의 모양새가 아닌 경우, 에러 메세지를 띄웁니다.
+![TennisMain](D:\Programming\images\README\TennisMain.png)
 
-- **Axios 비동기 요청** :pushpin: [코드 확인]()
 
-  - URL의 모양새인 경우, 컨텐츠를 등록하는 POST 요청을 비동기로 날립니다.
 
+- **게임 세팅** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b587bbff4dce02e3bec4f4787151a9b6fa326319/frontend/src/components/PostInput.vue#L67)
+
+  - 실행할 경기가 남자경기, 여자경기인지 입력받는다. 남자경기는 5세트, 여자경기는 3세트로 세트수가 설정된다.   
+  - 각 플레이어의 이름을 입력받은 후 세팅정보를 바탕으로 계수기 객체를 생성한다.
+
+- **게임 진행** :pushpin: [코드 확인]()
+
+  - 1 또는 2로 랜덤하게 득점자를 도출하고, 생성한 계수기 객체에서 포인트를 올리는 pointWinner(), 득점 처리하는  scoreBoard(), 반영된 점수를 출력하는 dispScoreBoard()를 호출한다.
+  - 해당 과정을 경기가 끝날때까지 while문으로 반복한다. 
+  
   
 
-### 4.3. 계수기 기능 - pointWinner(int p) , scoreBoard()  
+### 4.3. 계수기 기능 
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_controller.png)
+![scoreBoard](D:\Programming\images\README\scoreBoard.png)
 
-- **요청 처리** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b2c5e60761b6308f14eebe98ccdb1949de6c4b99/src/main/java/goQuality/integerous/controller/PostRestController.java#L55)
+- **득점 처리** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b2c5e60761b6308f14eebe98ccdb1949de6c4b99/src/main/java/goQuality/integerous/controller/PostRestController.java#L55)
 
-  - Controller에서는 요청을 화면단에서 넘어온 요청을 받고, Service 계층에 로직 처리를 위임합니다.
+  - 득점자의 포인트를 올리고 테니스 경기 규칙에 따라 포인트, 게임, 세트 수 생성한 객체의 멤버변수에 반영한다. 
 
-- **결과 응답** :pushpin: [코드 확인]()
+  - 포인트 4점 획득시 1게임을, 6게임 획득시 1 Set를 획득한 것으로 필드를 초기화며 게임, 세트 획득시 포인트 및 게임 필드를 리셋한다. 
 
-  - Service 계층에서 넘어온 로직 처리 결과(메세지)를 화면단에 응답해줍니다.
+  - 세트수의 과반수 이상 취득?시 경기를 종료하고 승리자를 도출한다. 
 
+    
+
+- **듀스 게임** :pushpin: [코드 확인]()
+
+  - 한 플레이어가 포인트 4점 획득했는데 1점차면 포인트 듀스가, 6게임 획득했는데 1 게임차면 각각 포인트 듀스, 게임 듀스가 발생한다.
+
+  - 그 즉시 별개의 포인트 필드와 while문을 사용해 듀스게임을 실행한다. 
+  
+    
   
 
 ### 4.4. 점수판 기능 - dispScoreBoard() 
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_service1.png)
+![dispScoreBoard](D:\Programming\images\README\dispScoreBoard.png)
 
-- **Http 프로토콜 추가 및 trim()** :pushpin: [코드 확인]()
+- **경기현황 출력** :pushpin: [코드 확인]()
 
-  - 사용자가 URL 입력 시 Http 프로토콜을 생략하거나 공백을 넣은 경우,  
-    올바른 URL이 될 수 있도록 Http 프로토콜을 추가해주고, 공백을 제거해줍니다.
+  - 현재 점수 현황, 즉 점수판을, 즉 두 선수의 포인트, 게임, 세트 획득 현황을 호출시 출력한다.
 
-- **URL 접속 확인** :pushpin: [코드 확인]()
+  - winner 필드가 null이 아니게 될 때 경기 종료 멘트와 함께 승자 정보를 출력한다. 
 
-  - 화면단에서 모양새만 확인한 URL이 실제 리소스로 연결되는지 HttpUrlConnection으로 테스트합니다.
-  - 이 때, 빠른 응답을 위해 Request Method를 GET이 아닌 HEAD를 사용했습니다.
-  - (HEAD 메소드는 GET 메소드의 응답 결과의 Body는 가져오지 않고, Header만 확인하기 때문에 GET 메소드에 비해 응답속도가 빠릅니다.)
+    
 
-  ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_service2.png)
+- **승자 정보 출력** :pushpin: [코드 확인]()
 
-- **Jsoup 이미지, 제목 파싱** :pushpin: [코드 확인]()
+  - 현재 점수 현황, 즉 점수판을, 즉 두 선수의 포인트, 게임, 세트 획득 현황을 호출시 출력한다.
 
-  - URL 접속 확인결과 유효하면 Jsoup을 사용해서 입력된 URL의 이미지와 제목을 파싱합니다.
-  - 이미지는 Open Graphic Tag를 우선적으로 파싱하고, 없을 경우 첫 번째 이미지와 제목을 파싱합니다.
-  - 컨텐츠에 이미지가 없을 경우, 미리 설정해둔 기본 이미지를 사용하고, 제목이 없을 경우 생략합니다.
+  - winner 필드가 null이 아니게 될 때 경기 종료 멘트와 함께 승자 정보를 출력한다. 
+
+  
 
   
 
 
-### 4.5. 최종 결과 출력 - writeTennisResult() 
+### 4.5. 최종결과 저장- writeTennisResult() 
 
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_repo.png)
+![WriteResult](D:\Programming\images\README\WriteResult.png)
 
-- **컨텐츠 저장** :pushpin: [코드 확인]()
-  - URL 유효성 체크와 이미지, 제목 파싱이 끝난 컨텐츠는 DB에 저장합니다.
-  - 저장된 컨텐츠는 다시 Repository - Service - Controller를 거쳐 화면단에 송출됩니다.
+- **파일 출력** :pushpin: [코드 확인]()
+  - 계수기 클래스 (ScoreCounter)에서 winner 필드가 null 이 아니면 파일 출력할 텍스트를 넘겨줍니다. 이때 formating의 편의를 위해 여러 list 변수로 텍스트를 받아둔다. 
+  - FileOutputStream을 통해 출력할 file을 지정하고, ObjectOutputStream의 writeUTF() 를 통해 tennisResult.txt에 실제로 출력한다. 
 
 </div>
 </details>
@@ -226,98 +232,104 @@
 
 ## 5. 핵심 트러블 슈팅
 
-### 5.1. 컨텐츠 필터와 페이징 처리 문제
+### 5.1. 인터페이스 참조변수 활용 
 
-- 저는 이 서비스가 페이스북이나 인스타그램 처럼 가볍게, 자주 사용되길 바라는 마음으로 개발했습니다.  
-  때문에 페이징 처리도 무한 스크롤을 적용했습니다.
+![그림1](D:\Programming\images\README\그림1.png)
 
-- 하지만 [무한스크롤, 페이징 혹은 “더보기” 버튼? 어떤 걸 써야할까](https://cyberx.tistory.com/82) 라는 글을 읽고 무한 스크롤의 단점들을 알게 되었고,  
-  다양한 기준(카테고리, 사용자, 등록일, 인기도)의 게시물 필터 기능을 넣어서 이를 보완하고자 했습니다.
+##### 2023-07
 
-- 그런데 게시물이 필터링 된 상태에서 무한 스크롤이 동작하면,  
-  필터링 된 게시물들만 DB에 요청해야 하기 때문에 아래의 **기존 코드** 처럼 각 필터별로 다른 Query를 날려야 했습니다.
+
+
+![](D:\Programming\images\readme\클래스다이어그램.jpg)
+
+
+
+*  인터페이스 특징 중 '다형성'을 활용해 개발 파트를 분리하고자 함.  실행할 떄 어떤 객체가 필요해 이를 생성하거나 상속받아 사용한다고 가정하면 해당 클래스가 개발을 마칠때까지 기다려야 main에서 해당 객체를 사용할 수 있다. 이때 interface를 사용한다면 실제 경기를 진행하는 ClassMain에선 해당 interface의 참조변수를 통해 빈 껍데기 뿐인 메서드지만 사용하고, 다른 사람들은 해당 interface를 상속받은 클래스에서 계수기 메서드를 구현한다. 개발을 마친 후 interface의 참조변수, 즉 조상 참조변수에 해당 자손 클래스 인스턴스를 대입해줌으로서 분업을 용이하게 사용한다. 생성해 포인트를 올리는 계수기 기능 메서드와 점수를 출력하는 점수판 기능의 메서드를 선언하여 실제 경기를 진행하는 ClassMain에서 해당 메서드를 실행할 수 있고 Class ScoreCounter에선 해당 인터페이스의 메서드를 구현하는 방식으로 역할분담을 해서 실제로 기능을 명확히 정해놓으니 계수기 객체가 다 구현이 안되었더라도 실행부 개발과 구현부 개발을 동시에 진행할 수 있었다.  <br>
+
+- 계수기 메서드, 즉 scoreBoard() 함수를 구현할 때 계산의 편의 및 게임, 세트수 계산과의 로직 일치를 위해 포인트 점수를 0,1,2,3 점으로 두어 득점처리를 했습니다. 던 포인트 점수를 테니스 경기 규칙에 맞춰 0, 15, 30, 40 로 각각 변환한다. 
+
+  
+
+### 5.2. 테니스 규칙에 맞는 포인트 출력
+
+- 계수기 메서드, 즉 scoreBoard() 함수를 구현할 때 계산의 편의 및 게임, 세트수 계산과의 로직 일치를 위해 포인트 점수를 0,1,2,3 점으로 두어 득점처리를 했습니다. 던 포인트 점수를 테니스 경기 규칙에 맞춰 0, 15, 30, 40 로 각각 변환한다. 
+  
+- 하지만 점수판 메서드, dispScoreBoard()를 구현할 때 포인트 점수를 출력할땐 테니스 경기 규칙에 따라 0,15,30,40 점으로 출력을 해야했고, 이 점수들은 서로 불규칙하며 이미 듀스게임까지 고려해놓은 계수기 메서드 로직을 수정할 시간이 부족했습니다.
+  
+- 그래서 해당 득점처리방식은 그대로 두되, 출력하는 점수판 메서드에서 0,15, 30, 45를 포인트 점수 배열로 만들고, 0,1,2,3을 배열의 index로 활용하여 각각 매칭 시켜 변환하여 출력형식을 바꾸어줍니다.
+
+- 계산의 편의로 0,1,2,3 점으로 두었던 포인트 점수를 테니스 경기 규칙에 맞춰 0, 15, 30, 45 로 각각 변환합니다.
+
+- 이렇게 하니 득점처리는 득점처리대로 로직을 유지하고 계산을 편하게 할 수 있고 출력하기 전에만 그 형식만 일치시켜 바꿔주면되어 편리했습니다
 
 <details>
 <summary><b>기존 코드</b></summary>
 <div markdown="1">
-
-
 ~~~java
-/**
- * 게시물 Top10 (기준: 댓글 수 + 좋아요 수)
- * @return 인기순 상위 10개 게시물
- */
-public Page<PostResponseDto> listTopTen() {
 
-    PageRequest pageRequest = PageRequest.of(0, 10, Sort.Direction.DESC, "rankPoint", "likeCnt");
-    return postRepository.findAll(pageRequest).map(PostResponseDto::new);
-}
-
-/**
- * 게시물 필터 (Tag Name)
- * @param tagName 게시물 박스에서 클릭한 태그 이름
- * @param pageable 페이징 처리를 위한 객체
- * @return 해당 태그가 포함된 게시물 목록
- */
-public Page<PostResponseDto> listFilteredByTagName(String tagName, Pageable pageable) {
-
-    return postRepository.findAllByTagName(tagName, pageable).map(PostResponseDto::new);
-}
-
-// ... 게시물 필터 (Member) 생략 
-
-/**
- * 게시물 필터 (Date)
- * @param createdDate 게시물 박스에서 클릭한 날짜
- * @return 해당 날짜에 등록된 게시물 목록
- */
-public List<PostResponseDto> listFilteredByDate(String createdDate) {
-
-    // 등록일 00시부터 24시까지
-    LocalDateTime start = LocalDateTime.of(LocalDate.parse(createdDate), LocalTime.MIN);
-    LocalDateTime end = LocalDateTime.of(LocalDate.parse(createdDate), LocalTime.MAX);
-
-    return postRepository
-                    .findAllByCreatedAtBetween(start, end)
-                    .stream()
-                    .map(PostResponseDto::new)
-                    .collect(Collectors.toList());
-    }
 ~~~
 
 </div>
 </details>
 
-- 이 때 카테고리(tag)로 게시물을 필터링 하는 경우,  
-  각 게시물은 최대 3개까지의 카테고리(tag)를 가질 수 있어 해당 카테고리를 포함하는 모든 게시물을 질의해야 했기 때문에  
+- 이 때 듀스게임까지 가게될 경우 포인트가 4를 넘을 수 있기때문에 단순히 1,2,3을 매칭시켜주면 안되고 5점,6점 같은것도 15점. 30점으로 맞춰줘야하기 때문에 나머지를 활용해 구현했습니다.
+- 아래 **개선된 코드**와 같이 QueryDSL을 사용하여 다소 복잡한 Query를 작성하면서도 페이징 처리를 할 수 있었습니다.
+
+<details>
+<summary><b>개선된 코드</b></summary>
+<div markdown="1">
+~~~java
+	int[] player1Points = { 0, 15, 30, 40 }; //포인트 점수
+		int[] player2Points = { 0, 15, 30, 40 };
+		int printplayer1Point 
+			= player1Points[player1Point % 4];
+		int printplayer2Point 
+			= player2Points[player2Point % 4];
+~~~
+
+</div>
+</details>
+
+</br>
+
+### 5.3. 듀스게임 현황 출력 
+
+- 계수기 메서드, 즉 scoreBoard() 함수를 구현할 때 계산의 편의 및 게임, 세트수 계산과의 로직 일치를 위해 포인트 점수를 0,1,2,3 점으로 두어 득점처리를 했습니다. 던 포인트 점수를 테니스 경기 규칙에 맞춰 0, 15, 30, 40 로 각각 변환합니다. 
+
+- 하지만 점수판 메서드, dispScoreBoard()를 구현할 때 포인트 점수를 출력할땐 테니스 경기 규칙에 따라 0,15,30,40 점으로 출력을 해야했고, 이 점수들은 서로 불규칙하며 이미 듀스게임까지 고려해놓은 계수기 메서드 로직을 수정할 시간이 부족했습니다.
+
+- 그래서 해당 득점처리방식은 그대로 두되, 출력하는 점수판 메서드에서 0,15, 30, 45를 포인트 점수 배열로 만들고, 0,1,2,3을 배열의 index로 활용하여 각각 매칭 시켜 변환하여 출력형식을 바꾸어줍니다.
+
+- 계산의 편의로 0,1,2,3 점으로 두었던 포인트 점수를 테니스 경기 규칙에 맞춰 0, 15, 30, 45 로 각각 변환합니다.
+
+- 이렇게 하니 득점처리는 득점처리대로 로직을 유지하고 계산을 편하게 할 수 있고 출력하기 전에만 그 형식만 일치시켜 바꿔주면되어 편리했습니다
+
+<details>
+<summary><b>기존 코드</b></summary>
+<div markdown="1">
+
+~~~java
+
+~~~
+
+</div>
+</details>
+
+- 이 때 듀스게임까지 가게될 경우 포인트가 4를 넘을 수 있기때문에 단순히 1,2,3을 매칭시켜주면 안되고 5점,6점 같은것도 15점. 30점으로 맞춰줘야하기 때문에 나머지를 활용해 구현했습니다.
 - 아래 **개선된 코드**와 같이 QueryDSL을 사용하여 다소 복잡한 Query를 작성하면서도 페이징 처리를 할 수 있었습니다.
 
 <details>
 <summary><b>개선된 코드</b></summary>
 <div markdown="1">
 
-
 ~~~java
-/**
- * 게시물 필터 (Tag Name)
- */
-@Override
-public Page<Post> findAllByTagName(String tagName, Pageable pageable) {
+int[] player1Points = { 0, 15, 30, 40 }; //포인트 점수
+int[] player2Points = { 0, 15, 30, 40 };
 
-    QueryResults<Post> results = queryFactory
-            .selectFrom(post)
-            .innerJoin(postTag)
-                .on(post.idx.eq(postTag.post.idx))
-            .innerJoin(tag)
-                .on(tag.idx.eq(postTag.tag.idx))
-            .where(tag.name.eq(tagName))
-            .orderBy(post.idx.desc())
-                .limit(pageable.getPageSize())
-                .offset(pageable.getOffset())
-            .fetchResults();
-
-    return new PageImpl<>(results.getResults(), pageable, results.getTotal());
-}
+int printplayer1Point 
+		= player1Points[player1Point % 4];
+int printplayer2Point 
+		= player2Points[player2Point % 4];
 ~~~
 
 </div>
@@ -325,220 +337,7 @@ public Page<Post> findAllByTagName(String tagName, Pageable pageable) {
 
 </br>
 
-## 6. 그 외 트러블 슈팅
 
-<details>
-<summary>npm run dev 실행 오류</summary>
-<div markdown="1">
-
-
-- Webpack-dev-server 버전을 3.0.0으로 다운그레이드로 해결
-- `$ npm install —save-dev webpack-dev-server@3.0.0`
-
-</div>
-</details>
-
-<details>
-<summary>vue-devtools 크롬익스텐션 인식 오류 문제</summary>
-<div markdown="1">
-
-
-  - main.js 파일에 `Vue.config.devtools = true` 추가로 해결
-  - [https://github.com/vuejs/vue-devtools/issues/190](https://github.com/vuejs/vue-devtools/issues/190)
-
-</div>
-</details>
-
-<details>
-<summary>ElementUI input 박스에서 `v-on:keyup.enter="메소드명"`이 정상 작동 안하는 문제</summary>
-<div markdown="1">
-
-
-  - `v-on:keyup.enter.native=""` 와 같이 .native 추가로 해결
-
-</div>
-</details>
-
-<details>
-<summary> Post 목록 출력시에 Member 객체 출력 에러 </summary>
-<div markdown="1">
-
-
-  - 에러 메세지(500에러)
-    - No serializer found for class org.hibernate.proxy.pojo.javassist.JavassistLazyInitializer and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationConfig.SerializationFeature.FAIL_ON_EMPTY_BEANS)
-  - 해결
-    - Post 엔티티에 @ManyToOne 연관관계 매핑을 LAZY 옵션에서 기본(EAGER)옵션으로 수정
-
-</div>
-</details>
-    
-
-<details>
-<summary> 프로젝트를 git init으로 생성 후 발생하는 npm run dev/build 오류 문제 </summary>
-<div markdown="1">
-
-
-  ```jsx
-    $ npm run dev
-    npm ERR! path C:\Users\integer\IdeaProjects\pilot\package.json
-    npm ERR! code ENOENT
-    npm ERR! errno -4058
-    npm ERR! syscall open
-    npm ERR! enoent ENOENT: no such file or directory, open 'C:\Users\integer\IdeaProjects\pilot\package.json'
-    npm ERR! enoent This is related to npm not being able to find a file.
-    npm ERR! enoent
-
-    npm ERR! A complete log of this run can be found in:
-    npm ERR!     C:\Users\integer\AppData\Roaming\npm-cache\_logs\2019-02-25T01_23_19_131Z-debug.log
-  ```
-
-  - 단순히 npm run dev/build 명령을 입력한 경로가 문제였다.
-
-</div>
-</details>    
-
-<details>
-<summary> 태그 선택후 등록하기 누를 때 `object references an unsaved transient instance - save the transient instance before flushing` 오류</summary>
-<div markdown="1">
-
-
-  - Post 엔티티의 @ManyToMany에 영속성 전이(cascade=CascadeType.ALL) 추가
-    - JPA에서 Entity를 저장할 때 연관된 모든 Entity는 영속상태여야 한다.
-    - CascadeType.PERSIST 옵션으로 부모와 자식 Enitity를 한 번에 영속화할 수 있다.
-    - 참고
-      - [https://stackoverflow.com/questions/2302802/object-references-an-unsaved-transient-instance-save-the-transient-instance-be/10680218](https://stackoverflow.com/questions/2302802/object-references-an-unsaved-transient-instance-save-the-transient-instance-be/10680218)
-
-</div>
-</details>    
-
-<details>
-<summary> JSON: Infinite recursion (StackOverflowError)</summary>
-<div markdown="1">
-
-
-  - @JsonIgnoreProperties 사용으로 해결
-    - 참고
-      - [http://springquay.blogspot.com/2016/01/new-approach-to-solve-json-recursive.html](http://springquay.blogspot.com/2016/01/new-approach-to-solve-json-recursive.html)
-      - [https://stackoverflow.com/questions/3325387/infinite-recursion-with-jackson-json-and-hibernate-jpa-issue](https://stackoverflow.com/questions/3325387/infinite-recursion-with-jackson-json-and-hibernate-jpa-issue)
-
-</div>
-</details>  
-    
-
-<details>
-<summary> H2 접속문제</summary>
-<div markdown="1">
-
-
-  - H2의 JDBC URL이 jdbc:h2:~/test 으로 되어있으면 jdbc:h2:mem:testdb 으로 변경해서 접속해야 한다.
-        
-
-</div>
-</details> 
-    
-
-<details>
-<summary> 컨텐츠수정 모달창에서 태그 셀렉트박스 드랍다운이 뒤쪽에 보이는 문제</summary>
-<div markdown="1">
-
-
-   - ElementUI의 Global Config에 옵션 추가하면 해결
-     - main.js 파일에 `Vue.us(ElementUI, { zIndex: 9999 });` 옵션 추가(9999 이하면 안됌)
-   - 참고
-     - [https://element.eleme.io/#/en-US/component/quickstart#global-config](https://element.eleme.io/#/en-US/component/quickstart#global-config)
-
-</div>
-</details> 
-
-<details>
-<summary> HTTP delete Request시 개발자도구의 XHR(XMLHttpRequest )에서 delete요청이 2번씩 찍히는 이유</summary>
-<div markdown="1">
-
-
-  - When you try to send a XMLHttpRequest to a different domain than the page is hosted, you are violating the same-origin policy. However, this situation became somewhat common, many technics are introduced. CORS is one of them.
-
-      In short, server that you are sending the DELETE request allows cross domain requests. In the process, there should be a **preflight** call and that is the **HTTP OPTION** call.
-
-      So, you are having two responses for the **OPTION** and **DELETE** call.
-
-      see [MDN page for CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS).
-
-    - 출처 : [https://stackoverflow.com/questions/35808655/why-do-i-get-back-2-responses-of-200-and-204-when-using-an-ajax-call-to-delete-o](https://stackoverflow.com/questions/35808655/why-do-i-get-back-2-responses-of-200-and-204-when-using-an-ajax-call-to-delete-o)
-
-</div>
-</details> 
-
-<details>
-<summary> 이미지 파싱 시 og:image 경로가 달라서 제대로 파싱이 안되는 경우</summary>
-<div markdown="1">
-
-
-  - UserAgent 설정으로 해결
-      - [https://www.javacodeexamples.com/jsoup-set-user-agent-example/760](https://www.javacodeexamples.com/jsoup-set-user-agent-example/760)
-      - [http://www.useragentstring.com/](http://www.useragentstring.com/)
-
-</div>
-</details> 
-    
-
-<details>
-<summary> 구글 로그인으로 로그인한 사용자의 정보를 가져오는 방법이 스프링 2.0대 버전에서 달라진 것</summary>
-<div markdown="1">
-
-
-  - 1.5대 버전에서는 Controller의 인자로 Principal을 넘기면 principal.getName(0에서 바로 꺼내서 쓸 수 있었는데, 2.0대 버전에서는 principal.getName()의 경우 principal 객체.toString()을 반환한다.
-
-    - 1.5대 버전에서 principal을 사용하는 경우
-    - 아래와 같이 사용했다면,
-
-    ```jsx
-    @RequestMapping("/sso/user")
-    @SuppressWarnings("unchecked")
-    public Map<String, String> user(Principal principal) {
-        if (principal != null) {
-            OAuth2Authentication oAuth2Authentication = (OAuth2Authentication) principal;
-            Authentication authentication = oAuth2Authentication.getUserAuthentication();
-            Map<String, String> details = new LinkedHashMap<>();
-            details = (Map<String, String>) authentication.getDetails();
-            logger.info("details = " + details);  // id, email, name, link etc.
-            Map<String, String> map = new LinkedHashMap<>();
-            map.put("email", details.get("email"));
-            return map;
-        }
-        return null;
-    }
-    ```
-
-    - 2.0대 버전에서는
-    - 아래와 같이 principal 객체의 내용을 꺼내 쓸 수 있다.
-
-    ```jsx
-    UsernamePasswordAuthenticationToken token =
-                    (UsernamePasswordAuthenticationToken) SecurityContextHolder
-                            .getContext().getAuthentication();
-            Map<String, Object> map = (Map<String, Object>) token.getPrincipal();
-    
-            String email = String.valueOf(map.get("email"));
-            post.setMember(memberRepository.findByEmail(email));
-    ```
-
-</div>
-</details> 
-    
-
-<details>
-<summary> 랭킹 동점자 처리 문제</summary>
-<div markdown="1">
-
-
-  - PageRequest의 Sort부분에서 properties를 "rankPoint"를 주고 "likeCnt"를 줘서 댓글수보다 좋아요수가 우선순위 갖도록 설정.
-  - 좋아요 수도 똑같다면..........
-        
-
-</div>
-</details> 
-    
-</br>
 
 ## 6. 회고 / 느낀점
 
