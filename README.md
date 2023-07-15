@@ -156,7 +156,7 @@
 
 
 
-- **게임 세팅** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b587bbff4dce02e3bec4f4787151a9b6fa326319/frontend/src/components/PostInput.vue#L67)
+- **게임 세팅** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/18b9b1124a69f585853726515a4a88d02aeb7b3b/tennis/src/tennis/TennisMain.java#L30-L64)
 
   - 실행할 경기가 남자경기, 여자경기인지 입력받는다. 남자경기는 5세트, 여자경기는 3세트로 세트수가 설정된다.   
   - 각 플레이어의 이름을 입력받은 후 세팅정보를 바탕으로 계수기 객체를 생성한다.
