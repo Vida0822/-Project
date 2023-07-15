@@ -27,8 +27,10 @@
 
 8. 프로젝트 회고 <br>
 
-   <br> 
+</div>
+</details>
 
+</br>
 
 ## 1. 제작 기간 & 참여 인원 
 
@@ -38,19 +40,12 @@
 
 </br>
 
-</div>
-</details>
-
-</br>
-
 ## 2. 사용 기술  
 
 - Java 8 사용  <br>
 - 툴 : eclipse 사용   <br>
 
 </br>
-
-
 
 ## 3. 요구 분석 
 
@@ -84,30 +79,25 @@
 
 ## 4. 순서도 (프로그램 흐름) 
 
+​	&nbsp;&nbsp;&nbsp;&nbsp;이 서비스의 핵심 기능은 포인트를 획득해 전체적인 경기 점수에 반영하는 계수기 기능과 현재 게임 스코어를 출력하는 점수판 기능이다. 사용자는 경기수와 경기자를 설정하고 실행을 하면 반복적으로 승자를 도출하며 테니스 경기를 자동으로 실행하고 경기 종료시 파일에 그 결과를 출력한다. <br><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있다.
+	
 
-
-​	이 서비스의 핵심 기능은 포인트를 획득해 전체적인 경기 점수에 반영하는 계수기 기능과 현재 게임 스코어를 출력하는 점수판 기능이다. 사용자는 경기수와 경기자를 설정하고 실행을 하면 반복적으로 승자를 도출하며 테니스 경기를 자동으로 실행하고 경기 종료시 파일에 그 결과를 출력한다.
-
-
-​	이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있다.  
-
-
-
-![프로그램 순서도](D:\Programming\images\readme\프로그램 순서도.jpg)
+![프로그램 순서도](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/ca69b4e2-d887-4b01-980f-35fa1cdda3e5)
 
 
 
 ## 5. 클래스 다이어그램 설계
 
 <details>
-<summary><b>핵심 기능 설명 펼치기</b></summary>
+<summary><b>클래스 다이어그램 설명 펼치기</b></summary>
 <div markdown="1">
 
 ### 5.1. Interface 개념 및 특징
 
-​	**인터페이스(interface)**는 추상 클래스(미완성 설계도)와 유사하지만 일반 메서드도 포함할 수 있는 다른 일반 추상 클래스와 달리 **오로지 추상 메서드와 상수**로만 이루어진다 (※ jdk 1.8 버전부턴 'default method' 형태로 포함 가능). 즉 해당 interface 안에는 오로지 **메서드의 선언부만** 작성된다.
+​	&nbsp;&nbsp;&nbsp;&nbsp;**인터페이스(interface)** 는 추상 클래스(미완성 설계도)와 유사하지만 일반 메서드도 포함할 수 있는 다른 일반 추상 클래스와 달리 **오로지 추상 메서드와 상수**로만 이루어진다 (※ jdk 1.8 버전부턴 'default method' 형태로 포함 가능). 즉 해당 interface 안에는 오로지 **메서드의 선언부만** 작성된다.
 
-​	이러한 인터페이스의 특징은 다음과 같다. 
+​	&nbsp;&nbsp;&nbsp;&nbsp;이러한 인터페이스의 특징은 다음과 같다.
 
 1. **다형성** : 조상 타입, 즉 인터페이스 타입 참조변수로 구현된 **자손 인스턴스를 대입**하여 사용할 수 있다. 
 
@@ -117,26 +107,26 @@
 
    
 
-​	interface의 특징을 고려해, 우리의 **인터페이스의 활용방안**은 다음 두가지였다. 
+​	&nbsp;&nbsp;&nbsp;&nbsp;interface의 특징을 고려해, 우리의 **인터페이스의 활용방안**은 다음 두가지였다.
 
 1. **기본 설계도**로서의 interface 
 2. **협업(분담)을 용이**하게 하는 interface 
 
-
+</br>
 
 ### 5.2. 클래스 다이어그램 
 
 ##### 2023-03
 
-![클래스 다이어그램](D:\Programming\images\readme\클래스 다이어그램.jpg)
+![클래스 다이어그램(팀)](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/a577be0c-b065-45c3-9f97-6867740cc92e)
 
 
 
-​	*"인터페이스는 **기본 설계도**이다."*
+​	&nbsp;&nbsp;&nbsp;&nbsp;*"인터페이스는 **기본 설계도**이다."*
 
-​	세상엔 **수많은 경기 종목**이 있고 각 규칙을 하나의 클래스에서 다 고려할 순 없다. 따라서 계수기라면 포함해야할 기본적인 기능인 **득점 처리** 기능과 **점수 출력**기능을 반드시 구현하도록, 즉 **최소한의 메서드**를 Interface에 선언하고 이를 자손 클래스에서 상속받아 **각 경기 종목에 맞춰 알아서 구현**하게끔 하는 **기본 설계도**로서 기능하게 한다. 
+​	&nbsp;&nbsp;&nbsp;&nbsp;세상엔 **수많은 경기 종목**이 있고 각 규칙을 하나의 클래스에서 다 고려할 순 없다. 따라서 계수기라면 포함해야할 기본적인 기능인 **득점 처리** 기능과 **점수 출력**기능을 반드시 구현하도록, 즉 **최소한의 메서드**를 Interface에 선언하고 이를 자손 클래스에서 상속받아 **각 경기 종목에 맞춰 알아서 구현**하게끔 하는 **기본 설계도**로서 기능하게 한다. 
 
-​	따라서 우린 '계수기' 기본 설계도로 **인터페이스 I**를 선언하고 이를 상속받은 테니스 계수기인 클래스 **ScoreCounter**는 해당 두 메서드를 **테니스 규칙을 반영하여 오버라이딩**한다. 이렇게 구현한 ScoreCounter를 실제 경기(main함수)가 실행되는 **TennisMain**에서 객체로 생성해 사용하게끔 구조를 설정했다.  
+​	&nbsp;&nbsp;&nbsp;&nbsp;따라서 우린 '계수기' 기본 설계도로 **인터페이스 I**를 선언하고 이를 상속받은 테니스 계수기인 클래스 **ScoreCounter**는 해당 두 메서드를 **테니스 규칙을 반영하여 오버라이딩**한다. 이렇게 구현한 ScoreCounter를 실제 경기(main함수)가 실행되는 **TennisMain**에서 객체로 생성해 사용하게끔 구조를 설정했다.      
 
 
 
@@ -157,19 +147,19 @@
 
 ### 6.1. 전체 흐름
 
-![핵심기능](D:\Programming\images\README\핵심기능-1689332910364-1.png)
+![핵심기능](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/76f2e20b-0c59-4eeb-914e-828974d0aaac)
 
 * **TennisMain** (Class) : 테니스 경기수 , 경기할 플레이어 등 경기를 세팅해 해당 정보로 계수기 객체를 생성하고 반복문으로 득점자를 도출해 생성해준 계수기 객체에 반영하는 실제 경기 실행 클래스 <br>
 * **ScoreCounter** (Class): 테니스의 전반적인 규칙을 반영한 클래스. 크게 점수를 계산하는 계수기 기능과 점수를 출력하는 점수판 기능으로 이루어져 있다. <br>
 * **WriteResult** (Class) : 최종적인 경기결과를 파일에 출력해주는 출력기능 클래스 <br>
 
-
+</br>
 
 ### 6.2. 게임 세팅 및 진행 
 
 
 
-![TennisMain](D:\Programming\images\README\TennisMain.png)
+![TennisMain](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/c1eac4bc-5e04-463a-b47c-f44d5680cfed)
 
 
 
@@ -183,11 +173,11 @@
   - 1 또는 2로 랜덤하게 득점자를 도출하고, 생성한 계수기 객체에서 포인트를 올리는 pointWinner(), 득점 처리하는  scoreBoard(), 반영된 점수를 출력하는 dispScoreBoard()를 호출한다.
   - 해당 과정을 경기가 끝날때까지 while문으로 반복한다. 
   
-  
+</br>  
 
 ### 6.3. 계수기 기능 
 
-![scoreBoard](D:\Programming\images\README\scoreBoard.png)
+![scoreBoard](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/7410cb17-8dad-4a06-8fbb-d95e875b0611)
 
 - **득점 처리** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b2c5e60761b6308f14eebe98ccdb1949de6c4b99/src/main/java/goQuality/integerous/controller/PostRestController.java#L55)
 
@@ -205,12 +195,12 @@
 
   - 그 즉시 별개의 듀스 포인트 필드와 while문을 사용해 듀스게임을 실행한다. 
   
-    
+ </br>   
   
 
 ### 6.4. 점수판 기능 - dispScoreBoard() 
 
-![dispScoreBoard](D:\Programming\images\README\dispScoreBoard.png)
+![dispScoreBoard](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/5f83dcb4-2c7b-4d38-894b-7446e2d8dae0)
 
 - **경기현황 출력** :pushpin: [코드 확인]()
 
@@ -228,12 +218,12 @@
 
   
 
-  
+</br>  
 
 
 ### 6.5. 최종결과 저장- writeTennisResult() 
 
-![WriteResult](D:\Programming\images\README\WriteResult.png)
+![WriteResult](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/afff5816-583e-42a8-a0c0-78b6d1a3e945)
 
 - **파일 출력** :pushpin: [코드 확인]()
   - 계수기 클래스 (ScoreCounter)에서 winner 필드가 null 이 아니면 파일 출력할 텍스트를 넘겨줍니다. 이때 formating의 편의를 위해 여러 list 변수로 텍스트를 받아둔다. 
@@ -246,45 +236,50 @@
 
 ## 7. 핵심 트러블 슈팅
 
+<details>
+<summary><b>트러블 슈팅 설명 펼치기</b></summary>
+<div markdown="1">
+
+
 ### 7.1. 인터페이스 참조변수 활용
 
-![그림1](D:\Programming\images\README\그림1.png)
+![인터페이스 손필기](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/961a7dc0-7ab6-48f7-87ad-3e47dbc6e300)
 
 ​	
 
-​	메서드 선언부(*Interface I*) 구현부(*Class B*)  사용부(*Class A*) 실행부(*Main*)로 클래스를 나누었다. 이 구조의 목적은 객체지향언어의 **다형성**을 활용해 부모 클래스가 완성되어야 자손 클래스가 구현가능한 상속구조의 단점을 해결해 분업의 효율성을 높이고자 함에있다.  
+​	&nbsp;&nbsp;&nbsp;&nbsp;메서드 선언부(*Interface I*) 구현부(*Class B*)  사용부(*Class A*) 실행부(*Main*)로 클래스를 나누었다. 이 구조의 목적은 객체지향언어의 **다형성**을 활용해 부모 클래스가 완성되어야 자손 클래스가 구현가능한 상속구조의 단점을 해결해 분업의 효율성을 높이고자 함에있다.  
 
-​	Class A에 interface 참조변수를 통해 **빈 껍데기 뿐인 메서드**를 만들어 로직을 구현하고, 다른 팀원들은 해당 interface를 상속받은 클래스B에서 **메서드의 몸체**를 구현한다. 각자 개발을 마친 후 프로그램 실행시 Class A를 객체로 생성하고 Class A 메서드의 매개변수인 interface의 참조변수, 즉 조상 참조변수에 인터페이스를 상속받은 Class B를 객체로 생성해 자손 인스턴스를 **동적으로 주입**한다. 
+​	&nbsp;&nbsp;&nbsp;&nbsp;Class A에 interface 참조변수를 통해 **빈 껍데기 뿐인 메서드**를 만들어 로직을 구현하고, 다른 팀원들은 해당 interface를 상속받은 클래스B에서 **메서드의 몸체**를 구현한다. 각자 개발을 마친 후 프로그램 실행시 Class A를 객체로 생성하고 Class A 메서드의 매개변수인 interface의 참조변수, 즉 조상 참조변수에 인터페이스를 상속받은 Class B를 객체로 생성해 자손 인스턴스를 **동적으로 주입**한다. 
 
-​	위 구조를 우리 프로젝트에 반영하면 아래와 같다. 
-
-
-
-![초기 클래스다이어그램](D:\Programming\images\README\초기 클래스다이어그램.png)
+​	&nbsp;&nbsp;&nbsp;&nbsp;위 구조를 우리 프로젝트에 반영하면 아래와 같다. 
+</br>
 
 
+![초기 클래스다이어그램](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/1b6384a0-cc8b-4a7b-a697-1b18fb68b6bc)
 
-​	득점시 포인트를 올리는 pointWinner(int p)와 게임현황을 출력하는 dispScoreBoard() 두 메서드를 인터페이스 I에 선언한다. 메서드를 **구현하는 ScoreCount** 클래스와, 테니스 규칙을 반영해 **득점처리**하는 계수기, **ScoreBoard** 클래스를 작성한다. **게임이 실행**되는 TennisMain에선 경기정보를 입력받아 계수기, **ScoreBoard를 객체로 생성**하면서 게임을 세팅한다. 이후 득점자를 랜덤으로 도출하고 **인터페이스 I를 매개변수**로 갖는 pointWinner(I i), dispScoreBoard(I i) 매개변수에 **ScoreCount를 넣어 호출**하며 득점처리 및 점수출력을 실행한다. 이 과정을 게임이 끝날때까지 while문으로 반복한다. 
 
-​	게임을 세팅, 진행하는 TennisMain에 2명, 메서드 구현부에 2명, 계수기 로직 구현에 3명으로 개발 파트를 나누었다. 인터페이스에 **메서드의 기능과 리턴타입을 명확히 선언**해 놓으니 실제로 구현이 안되었더라도 **계수기 로직 개발을 동시에 진행**할 수 있었다.
+
+​	&nbsp;&nbsp;&nbsp;&nbsp;득점시 포인트를 올리는 pointWinner(int p)와 게임현황을 출력하는 dispScoreBoard() 두 메서드를 인터페이스 I에 선언한다. 메서드를 **구현하는 ScoreCount** 클래스와, 테니스 규칙을 반영해 **득점처리**하는 계수기, **ScoreBoard** 클래스를 작성한다. **게임이 실행**되는 TennisMain에선 경기정보를 입력받아 계수기, **ScoreBoard를 객체로 생성**하면서 게임을 세팅한다. 이후 득점자를 랜덤으로 도출하고 **인터페이스 I를 매개변수**로 갖는 pointWinner(I i), dispScoreBoard(I i) 매개변수에 **ScoreCount를 넣어 호출**하며 득점처리 및 점수출력을 실행한다. 이 과정을 게임이 끝날때까지 while문으로 반복한다. 
+
+​	&nbsp;&nbsp;&nbsp;&nbsp;게임을 세팅, 진행하는 TennisMain에 2명, 메서드 구현부에 2명, 계수기 로직 구현에 3명으로 개발 파트를 나누었다. 인터페이스에 **메서드의 기능과 리턴타입을 명확히 선언**해 놓으니 실제로 구현이 안되었더라도 **계수기 로직 개발을 동시에 진행**할 수 있었다.
 
 <br>
 
 *Problem*
 
-​	 문제는 메서드의 리턴값만으로 테니스 득점로직을 계수기 클래스(ScoreBoard)에 구현해야하는데, 포인트 점수를 다루는 메서드 구현부(ScoreCounter)와 포인트 점수, 게임, 세트 모두를 처리하는 계수기(ScoreBoard)간 **멤버변수가 중복선언** 되는 등 **기능 구분이 명확하지 않았다**. 
+​	 &nbsp;&nbsp;&nbsp;&nbsp;문제는 메서드의 리턴값만으로 테니스 득점로직을 계수기 클래스(ScoreBoard)에 구현해야하는데, 포인트 점수를 다루는 메서드 구현부(ScoreCounter)와 포인트 점수, 게임, 세트 모두를 처리하는 계수기(ScoreBoard)간 **멤버변수가 중복선언** 되는 등 **기능 구분이 명확하지 않았다**. 
 
-​	또한 **객체의 주입(DI)** 에 대한 이해부족으로 **인터페이스 참조변수**를 잘 활용하지 못해, 실행부(ScoreBoard)에서 인터페이스 참조변수로 메서드를 새롭게 선언하거나 메인 함수의 게임세팅과 연결지어 줄 때 어려움이 있었다. 즉 코딩경험 부족에 의한 기술적 한계로 **클래스간의 기능 연계**가 원활이 이루어지지 못했다. 
+​	&nbsp;&nbsp;&nbsp;&nbsp;또한 **객체의 주입(DI)** 에 대한 이해부족으로 **인터페이스 참조변수**를 잘 활용하지 못해, 실행부(ScoreBoard)에서 인터페이스 참조변수로 메서드를 새롭게 선언하거나 메인 함수의 게임세팅과 연결지어 줄 때 어려움이 있었다. 즉 코딩경험 부족에 의한 기술적 한계로 **클래스간의 기능 연계**가 원활이 이루어지지 못했다. 
 
-
+</br>
 
 *Solution*
 
-​	개발 시간이 촉박했던 시점이라 **메서드 사용클래스(ScoreBoard)를 없애고**  ScoreCounter 클래스에서 테니스 규칙을 반영하며 메서드를 구현하는 방향으로 설계를 수정했다. 실제 main함수에선 구현부인 **ScoreCounter에서 직접 메서드를 호출**하도록 했다.
+​	&nbsp;&nbsp;&nbsp;&nbsp;개발 시간이 촉박했던 시점이라 **메서드 사용클래스(ScoreBoard)를 없애고**  ScoreCounter 클래스에서 테니스 규칙을 반영하며 메서드를 구현하는 방향으로 설계를 수정했다. 실제 main함수에선 구현부인 **ScoreCounter에서 직접 메서드를 호출**하도록 했다.
 
-​	이렇게 하니 구현자체는 편해졌지만 ScoreCounter에 계수기 로직(테니스 규칙)과 득점 처리, 출력 등 여러 기능이 섞여 객체 지향의 장점인 **모듈화**가 잘 이루어지지 않고 **코드의 가독성**이 떨어졌다. 시간적 여유가 있었다면  클래스간 기능 구분을 더 명확히 하고 그 주입, 연계관계를 통해 객체지향의 장점을 최대한 살린 체계적인 프로그램을 만들 수 있었을 것 같아 팀원들과 나도 많이 아쉬웠다. 
+​	&nbsp;&nbsp;&nbsp;&nbsp;이렇게 하니 구현자체는 편해졌지만 ScoreCounter에 계수기 로직(테니스 규칙)과 득점 처리, 출력 등 여러 기능이 섞여 객체 지향의 장점인 **모듈화**가 잘 이루어지지 않고 **코드의 가독성**이 떨어졌다. 시간적 여유가 있었다면  클래스간 기능 구분을 더 명확히 하고 그 주입, 연계관계를 통해 객체지향의 장점을 최대한 살린 체계적인 프로그램을 만들 수 있었을 것 같아 팀원들과 나도 많이 아쉬웠다. 
 
-
+</br>
 
 ### 7.2. 테니스 규칙에 맞는 포인트 출력
 
@@ -326,7 +321,7 @@
 *Problem*
 
 - 하지만 점수판 메서드, dispScoreBoard()를 구현할 때 포인트 점수를 출력할땐 테니스 경기 규칙에 따라 0,15,30,40 점으로 출력을 해야했는데, 이 점수들은 서로 불규칙하여 득점시 고정값으로 올리는 것이 불가능했다.  
-
+</br>
 
 *Solution*
 
@@ -338,14 +333,15 @@
 <details>
 <summary><b>개선된 코드</b></summary>
 <div markdown="1">
-~~~java
+	
+```java
 int[] player1Points = { 0, 15, 30, 40 }; //포인트 점수
 int[] player2Points = { 0, 15, 30, 40 };
 int printplayer1Point 
 		= player1Points[player1Point % 4];
 int printplayer2Point 
 		= player2Points[player2Point % 4];
-~~~
+```
 
 </div>
 </details>
@@ -353,7 +349,12 @@ int printplayer2Point
 </br>
 
 
+</div>
+</details>
+
+</br>
 
 ## 8. 회고 / 느낀점
 
 >프로젝트 개발 회고 글: https://zuminternet.github.io/ZUM-Pilot-integer/
+> 부제 2 : 
