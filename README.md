@@ -157,7 +157,7 @@
 
 ### 6.1. 전체 흐름
 
-![핵심기능](D:\Programming\images\README\핵심기능-1689332910364-1.png)
+![핵심기능](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/76f2e20b-0c59-4eeb-914e-828974d0aaac)
 
 * **TennisMain** (Class) : 테니스 경기수 , 경기할 플레이어 등 경기를 세팅해 해당 정보로 계수기 객체를 생성하고 반복문으로 득점자를 도출해 생성해준 계수기 객체에 반영하는 실제 경기 실행 클래스 <br>
 * **ScoreCounter** (Class): 테니스의 전반적인 규칙을 반영한 클래스. 크게 점수를 계산하는 계수기 기능과 점수를 출력하는 점수판 기능으로 이루어져 있다. <br>
