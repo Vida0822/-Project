@@ -29,7 +29,7 @@
 
 👩‍👧‍👧 팀 프로젝트 (7인)<br>
 
--  2023 3월 7일 ~ 3월 10일 (4일)  <br>
+📆 2023 3월 7일 ~ 3월 10일 (4일)  <br>
 
 </br>
 
@@ -174,17 +174,17 @@
 
 - **득점 처리** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/2fb77b76e96d4afbde8e7204d4b52e4e98ddcbdb/tennis/src/tennis/ScoreCounter.java#L57-L82)
 
-  - 득점자의 포인트를 올리고 테니스 경기 규칙에 따라 포인트, 게임, 세트 수 생성한 객체의 멤버변수에 반영한다. 
+  - 득점자의 포인트를 올리고 이를 생성한 계수기 객체의 멤버변수(각 선수 포인트, 게임, 세트수)에 경기 규칙에 따라 반영한다. 
 
   - 포인트 4점 획득시 1게임을, 6게임 획득시 1 Set를 획득한 것으로 필드를 초기화며 게임, 세트 획득시 포인트 및 게임 필드를 리셋한다. 
 
-  - 세트수의 과반수 이상 취득?시 경기를 종료하고 승리자를 도출한다. 
+  - 설정된 세트수의 과반수 이상 획득 시 경기를 종료하고 승자를 결정한다. 
 
     
 
 - **듀스 게임** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/2fb77b76e96d4afbde8e7204d4b52e4e98ddcbdb/tennis/src/tennis/ScoreCounter.java#L85-L136)
 
-  - 한 플레이어가 포인트 4점 획득했는데 1점차면 포인트 듀스가, 6게임 획득했는데 1 게임차면 각각 포인트 듀스, 게임 듀스가 발생한다.
+  - 한 플레이어가 포인트 4점 획득했는데 1점차면 포인트 듀스가, 6게임 획득했는데 1 게임차면 게임 듀스가 발생한다.
 
   - 그 즉시 별개의 듀스 포인트 필드와 while문을 사용해 듀스게임을 실행한다. 
   
@@ -197,17 +197,16 @@
 
 - **경기현황 출력** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/2fb77b76e96d4afbde8e7204d4b52e4e98ddcbdb/tennis/src/tennis/ScoreCounter.java#L156-L171)
 
-  - 현재 점수 현황, 즉 점수판을, 즉 두 선수의 포인트, 게임, 세트 획득 현황을 호출시 출력한다.
-
-  - winner 필드가 null이 아니게 될 때 경기 종료 멘트와 함께 승자 정보를 출력한다. 
-
+  - 현재 점수 현황, 즉 두 선수의 포인트, 게임, 세트 획득 현황을 나타내는 점수판을 함수 호출시 출력한다.
     
 
-- **승자정보 출력** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/2fb77b76e96d4afbde8e7204d4b52e4e98ddcbdb/tennis/src/tennis/ScoreCounter.java#L173-L174)
-
-  - 현재 점수 현황, 즉 점수판을, 즉 두 선수의 포인트, 게임, 세트 획득 현황을 호출시 출력한다.
+- **승자정보 출력** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/7f093b13a61377db0f12217858f593e3fa904756/tennis/src/tennis/ScoreCounter.java#L173-L184)
 
   - winner 필드가 null이 아니게 될 때 경기 종료 멘트와 함께 승자 정보를 출력한다. 
+
+  - 파일에 출력할 최종결과 텍스트를 작성한다. 이때 formating의 편의를 위해 여러 list 변수로 텍스트를 받아둔다.
+    
+  - 이렇게 작성한 텍스트를 파일 입출력을 수행하는 WriteResult 객체의 생성자를 통해 넣어준다. 
 
   
 
@@ -219,8 +218,9 @@
 ![WriteResult](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/afff5816-583e-42a8-a0c0-78b6d1a3e945)
 
 - **파일 출력** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/2fb77b76e96d4afbde8e7204d4b52e4e98ddcbdb/tennis/src/tennis/WriteResult.java#L7)
-  - 계수기 클래스 (ScoreCounter)에서 winner 필드가 null 이 아니면 파일 출력할 텍스트를 넘겨줍니다. 이때 formating의 편의를 위해 여러 list 변수로 텍스트를 받아둔다. 
-  - FileOutputStream을 통해 출력할 file을 지정하고, ObjectOutputStream의 writeUTF() 를 통해 tennisResult.txt에 실제로 출력한다. 
+
+  - FileOutputStream을 통해 출력할 file을 지정한다
+  - ObjectOutputStream의 writeUTF() 를 통해 tennisResult.txt에 실제로 출력한다. 
 
 </div>
 </details>
