@@ -356,5 +356,5 @@ int printplayer2Point
 
 ## 8. 회고 / 느낀점
 
->프로젝트 개발 회고 글: https://zuminternet.github.io/ZUM-Pilot-integer/
-> 부제 2 : 
+>프로젝트 개발 회고 글:https://vida0822.github.io/MR_TennisMemory/
+> 부제 2 : https://vida0822.github.io/MR_TennisMemory/
