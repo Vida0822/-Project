@@ -93,7 +93,7 @@
 
 
 
-![프로그램 순서도](D:\Programming\images\readme\프로그램 순서도.jpg)
+![프로그램 순서도](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/ca69b4e2-d887-4b01-980f-35fa1cdda3e5)
 
 
 
@@ -128,7 +128,7 @@
 
 ##### 2023-03
 
-![클래스 다이어그램](D:\Programming\images\readme\클래스 다이어그램.jpg)
+![클래스 다이어그램(팀)](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/a577be0c-b065-45c3-9f97-6867740cc92e)
 
 
 
@@ -248,7 +248,7 @@
 
 ### 7.1. 인터페이스 참조변수 활용
 
-![그림1](D:\Programming\images\README\그림1.png)
+![인터페이스 손필기](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/961a7dc0-7ab6-48f7-87ad-3e47dbc6e300)
 
 ​	
 
@@ -260,7 +260,7 @@
 
 
 
-![초기 클래스다이어그램](D:\Programming\images\README\초기 클래스다이어그램.png)
+![초기 클래스다이어그램](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/1b6384a0-cc8b-4a7b-a697-1b18fb68b6bc)
 
 
 
@@ -357,3 +357,4 @@ int printplayer2Point
 ## 8. 회고 / 느낀점
 
 >프로젝트 개발 회고 글: https://zuminternet.github.io/ZUM-Pilot-integer/
+> 부제 2 : 
