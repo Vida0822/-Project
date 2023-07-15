@@ -95,7 +95,7 @@
 ## 5. 클래스 다이어그램 설계
 
 <details>
-<summary><b>핵심 기능 설명 펼치기</b></summary>
+<summary><b>클래스 다이어그램 설명 펼치기</b></summary>
 <div markdown="1">
 
 ### 5.1. Interface 개념 및 특징
@@ -241,6 +241,11 @@
 
 ## 7. 핵심 트러블 슈팅
 
+<details>
+<summary><b>트러블 슈팅 설명 펼치기</b></summary>
+<div markdown="1">
+
+
 ### 7.1. 인터페이스 참조변수 활용
 
 ![인터페이스 손필기](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/961a7dc0-7ab6-48f7-87ad-3e47dbc6e300)
@@ -349,6 +354,10 @@ int printplayer2Point
 </br>
 
 
+</div>
+</details>
+
+</br>
 
 ## 8. 회고 / 느낀점
 
