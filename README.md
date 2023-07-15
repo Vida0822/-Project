@@ -350,4 +350,5 @@ int printplayer2Point
 ## 8. 회고 / 느낀점
 
 > 팀활동에서 좋은 관계란 무엇일까? : https://vida0822.github.io/memory/MR_TennisMemory/		</br> >
+ 
 > 문과식 사고방식을 버려라 : https://vida0822.github.io/memory/MR_TennisMemory(2)/
