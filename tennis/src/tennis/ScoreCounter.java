@@ -55,6 +55,32 @@ public class ScoreCounter implements I { // 인터페이스 I를 구현하고 ov
 	}
 
 	public void scoreBoard() { // 계수기 메서드
+		
+
+		if (player1Point == 4) { //player1이 4포인트를 이겼을때
+			player1Game++;
+			pointReset();
+		}
+		if (player2Point == 4) { //player2이 4포인트를 이겼을때
+			player2Game++;
+			pointReset();
+		}
+		if (player1Game == 6) { //player1이 6게임를 이겼을때
+			player1Set++;
+			gameReset();
+			pointReset();
+		}
+		if (player2Game == 6) { //player이 6게임를 이겼을때
+			player2Set++;
+			gameReset();
+			pointReset();
+		}
+		if (player1Set > player2Set && player1Set >= numSet / 2 + 1) {// 최종 승자 도출 
+			winner = player1;
+		} else if (player2Set > player1Set && player2Set >= numSet / 2 + 1) {
+			winner = player2;
+		}
+		
 
 		if ((player1Game == 5 && player2Game == 6) || (player1Game == 6 && player2Game == 5)) { //게임듀스 로직
 			System.out.println("        게임듀스 발생!!");
@@ -109,31 +135,6 @@ public class ScoreCounter implements I { // 인터페이스 I를 구현하고 ov
 			} //while
 		}
 
-		if (player1Point == 4) { //player1이 4포인트를 이겼을때
-			player1Game++;
-			pointReset();
-		}
-		if (player2Point == 4) { //player2이 4포인트를 이겼을때
-			player2Game++;
-			pointReset();
-		}
-		if (player1Game == 6) { //player1이 6게임를 이겼을때
-			player1Set++;
-			gameReset();
-			pointReset();
-		}
-		if (player2Game == 6) { //player이 6게임를 이겼을때
-			player2Set++;
-			gameReset();
-			pointReset();
-		}
-
-		
-		if (player1Set > player2Set && player1Set >= numSet / 2 + 1) {// 최종 승자 도출 
-			winner = player1;
-		} else if (player2Set > player1Set && player2Set >= numSet / 2 + 1) {
-			winner = player2;
-		}
 	} //scoreBoard
 
 	private void dueceReset() { //듀스점수리셋 메서드
@@ -153,10 +154,14 @@ public class ScoreCounter implements I { // 인터페이스 I를 구현하고 ov
 
 	@Override
 	public void dispScoreBoard() {  //현재 점수 출력 메서드
+		
 		int[] player1Points = { 0, 15, 30, 40 }; //포인트 점수
 		int[] player2Points = { 0, 15, 30, 40 };
-		int printplayer1Point = player1Points[player1Point % 4];
-		int printplayer2Point = player2Points[player2Point % 4];
+		int printplayer1Point 
+			= player1Points[player1Point % 4];
+		int printplayer2Point 
+			= player2Points[player2Point % 4];
+		
 
 		System.out.println("\tSCORE\tGAME \tSET");
 		System.out.println("-".repeat(30));

@@ -44,7 +44,7 @@ public class TennisMain {
 					numSet = 5;
 					flag = true;
 				} else if (play == 2) {		//여자경기
-					System.out.println(" ☞ 여자 경기를 선택하셨습니다. 5전3승 경기로 진행됩니다.");
+					System.out.println(" ☞ 여자 경기를 선택하셨습니다. 3전2승 경기로 진행됩니다.");
 					numSet = 3;
 					flag = true;
 				} else {		//잘못입력
@@ -52,7 +52,7 @@ public class TennisMain {
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("다시 입력해주세요. 입력: ");
-				scanner.nextInt();
+				scanner.next();
 			}
 		}
 
