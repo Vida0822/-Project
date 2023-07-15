@@ -349,5 +349,5 @@ int printplayer2Point
 
 ## 8. 회고 / 느낀점
 
->프로젝트 개발 회고 글:https://vida0822.github.io/MR_TennisMemory/
-> 부제 2 : https://vida0822.github.io/MR_TennisMemory/
+> 팀활동에서 좋은 관계란 무엇일까? : https://vida0822.github.io/memory/MR_TennisMemory/
+> 문과식 사고방식을 버려라 : https://vida0822.github.io/memory/MR_TennisMemory(2)/
