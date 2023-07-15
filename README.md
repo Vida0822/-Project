@@ -172,7 +172,7 @@
 
 ![scoreBoard](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/7410cb17-8dad-4a06-8fbb-d95e875b0611)
 
-- **득점 처리** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b2c5e60761b6308f14eebe98ccdb1949de6c4b99/src/main/java/goQuality/integerous/controller/PostRestController.java#L55)
+- **득점 처리** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/2fb77b76e96d4afbde8e7204d4b52e4e98ddcbdb/tennis/src/tennis/ScoreCounter.java#L57-L82)
 
   - 득점자의 포인트를 올리고 테니스 경기 규칙에 따라 포인트, 게임, 세트 수 생성한 객체의 멤버변수에 반영한다. 
 
@@ -182,7 +182,7 @@
 
     
 
-- **듀스 게임** :pushpin: [코드 확인]()
+- **듀스 게임** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/2fb77b76e96d4afbde8e7204d4b52e4e98ddcbdb/tennis/src/tennis/ScoreCounter.java#L85-L136)
 
   - 한 플레이어가 포인트 4점 획득했는데 1점차면 포인트 듀스가, 6게임 획득했는데 1 게임차면 각각 포인트 듀스, 게임 듀스가 발생한다.
 
@@ -195,7 +195,7 @@
 
 ![dispScoreBoard](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/5f83dcb4-2c7b-4d38-894b-7446e2d8dae0)
 
-- **경기현황 출력** :pushpin: [코드 확인]()
+- **경기현황 출력** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/2fb77b76e96d4afbde8e7204d4b52e4e98ddcbdb/tennis/src/tennis/ScoreCounter.java#L156-L171)
 
   - 현재 점수 현황, 즉 점수판을, 즉 두 선수의 포인트, 게임, 세트 획득 현황을 호출시 출력한다.
 
@@ -203,7 +203,7 @@
 
     
 
-- **승자정보 출력** :pushpin: [코드 확인]()
+- **승자정보 출력** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/2fb77b76e96d4afbde8e7204d4b52e4e98ddcbdb/tennis/src/tennis/ScoreCounter.java#L173-L174)
 
   - 현재 점수 현황, 즉 점수판을, 즉 두 선수의 포인트, 게임, 세트 획득 현황을 호출시 출력한다.
 
@@ -218,7 +218,7 @@
 
 ![WriteResult](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/afff5816-583e-42a8-a0c0-78b6d1a3e945)
 
-- **파일 출력** :pushpin: [코드 확인]()
+- **파일 출력** :pushpin: [코드 확인](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/blob/2fb77b76e96d4afbde8e7204d4b52e4e98ddcbdb/tennis/src/tennis/WriteResult.java#L7)
   - 계수기 클래스 (ScoreCounter)에서 winner 필드가 null 이 아니면 파일 출력할 텍스트를 넘겨줍니다. 이때 formating의 편의를 위해 여러 list 변수로 텍스트를 받아둔다. 
   - FileOutputStream을 통해 출력할 file을 지정하고, ObjectOutputStream의 writeUTF() 를 통해 tennisResult.txt에 실제로 출력한다. 
 
