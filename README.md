@@ -1,7 +1,6 @@
 # :pushpin: Java로 테니스 계수기 만들기 
 
 > Java의 interface 개념을 활용한 테니스 계수기 구현과 파일 출력기능  
-> https://go-quality.dev  
 
 </br> 
 
