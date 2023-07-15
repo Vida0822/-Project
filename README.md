@@ -7,10 +7,6 @@
 
 ### 목차
 
-<details>
-<summary><b>목차 펼치기</b></summary>
-<div markdown="1">
-
 1. 제작기간 & 참여 인원  <br>
 
 2. 사용 기술  <br>
@@ -27,10 +23,7 @@
 
 8. 프로젝트 회고 <br>
 
-</div>
-</details>
 
-</br>
 
 ## 1. 제작 기간 & 참여 인원 
 
