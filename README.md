@@ -187,7 +187,7 @@
 
 ### 6.3. 계수기 기능 
 
-![scoreBoard](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/670ec0dc-2896-4f50-b9ac-f84ab0
+![scoreBoard](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/7410cb17-8dad-4a06-8fbb-d95e875b0611)
 
 - **득점 처리** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b2c5e60761b6308f14eebe98ccdb1949de6c4b99/src/main/java/goQuality/integerous/controller/PostRestController.java#L55)
 
