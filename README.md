@@ -169,7 +169,7 @@
 
 
 
-![TennisMain](D:\Programming\images\README\TennisMain.png)
+![TennisMain](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/c1eac4bc-5e04-463a-b47c-f44d5680cfed)
 
 
 
@@ -187,7 +187,7 @@
 
 ### 6.3. 계수기 기능 
 
-![scoreBoard](D:\Programming\images\README\scoreBoard.png)
+![scoreBoard](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/670ec0dc-2896-4f50-b9ac-f84ab0
 
 - **득점 처리** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b2c5e60761b6308f14eebe98ccdb1949de6c4b99/src/main/java/goQuality/integerous/controller/PostRestController.java#L55)
 
@@ -210,7 +210,7 @@
 
 ### 6.4. 점수판 기능 - dispScoreBoard() 
 
-![dispScoreBoard](D:\Programming\images\README\dispScoreBoard.png)
+![dispScoreBoard](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/5f83dcb4-2c7b-4d38-894b-7446e2d8dae0)
 
 - **경기현황 출력** :pushpin: [코드 확인]()
 
@@ -233,7 +233,7 @@
 
 ### 6.5. 최종결과 저장- writeTennisResult() 
 
-![WriteResult](D:\Programming\images\README\WriteResult.png)
+![WriteResult](https://github.com/Vida0822/TennisCounter_Java-Interface-Project/assets/132312673/afff5816-583e-42a8-a0c0-78b6d1a3e945)
 
 - **파일 출력** :pushpin: [코드 확인]()
   - 계수기 클래스 (ScoreCounter)에서 winner 필드가 null 이 아니면 파일 출력할 텍스트를 넘겨줍니다. 이때 formating의 편의를 위해 여러 list 변수로 텍스트를 받아둔다. 
