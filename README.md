@@ -333,14 +333,15 @@
 <details>
 <summary><b>개선된 코드</b></summary>
 <div markdown="1">
-~~~java
+	
+```java
 int[] player1Points = { 0, 15, 30, 40 }; //포인트 점수
 int[] player2Points = { 0, 15, 30, 40 };
 int printplayer1Point 
 		= player1Points[player1Point % 4];
 int printplayer2Point 
 		= player2Points[player2Point % 4];
-~~~
+```
 
 </div>
 </details>
