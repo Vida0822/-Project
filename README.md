@@ -364,6 +364,6 @@ int printplayer2Point
 
 ## 8. 회고 / 느낀점
 
-> 팀활동에서 좋은 관계란 무엇일까? : https://vida0822.github.io/memory/MR_TennisMemory/		</br> 
+> '좋은 팀'에 대한 고민 : https://vida0822.github.io/memory/MR_TennisMemory/		</br> 
  
-> 열심히가 아닌 효율적으로! : https://vida0822.github.io/memory/MR_TennisMemory(2)/
+> 그래서, 그거 코딩할 수 있어? : https://vida0822.github.io/memory/MR_TennisMemory(2)/
