@@ -364,6 +364,6 @@ int printplayer2Point
 
 ## 8. 회고 / 느낀점
 
-> '좋은 팀'에 대한 고민 : https://vida0822.github.io/memory/MR_TennisMemory/		</br> 
+> ['좋은 팀'에 대한 고민](https://vida0822.github.io/memory/MR_TennisMemory(1)/) </br> 
  
-> 그래서, 그거 코딩할 수 있어? : https://vida0822.github.io/memory/MR_TennisMemory(2)/
+> [그래서, 그거 코딩할 수 있어?](https://vida0822.github.io/memory/MR_TennisMemory(2)/) 
